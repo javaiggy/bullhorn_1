@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Message List</title>
+</head>
+<body>
+
+<a href="/">Message Detail:</a><br/>
+Sender:<p th:text="${message.sentby}" ></p>
+<p></p>
+
+Date:<p th:text="${message.posteddate}" th:rows="2" ></p>
+
+Content:<p th:text="${message.content}" th:rows="2" ></p>
+
+<a th:href="@{/delete/{id}(id=${message.id} ) }">Delete this Task</a>
+
+</body>
+</html>
